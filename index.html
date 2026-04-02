@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bird Island</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Itim&family=Story+Script&family=Coiny&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div id="container">
+        <section id="main">
+            <section class="map-section" data-area="Floresta"></section>
+            <section class="map-section" data-area="Praia"></section>
+            <section class="map-section" data-area="Campo"></section>
+        </section>
+
+        <section id="explorer" hidden>
+            <section class="search-area"></section>
+            <section class="search-area"></section>
+            <section class="search-area"></section>
+            <section class="search-area"></section>
+            <section class="search-area"></section>
+            <section class="search-area"></section>
+        </section>
+
+        <section id="menu">
+            <div id="menu-header">
+                <h1 id="menu-header-title">Ilha dos Pássaros</h1>
+                <div>
+                    <button id="back-btn" onclick="returnToMain()" hidden>&lt;</button>
+                    <button onclick="openAlbum()"><img src="img/icon/album.png"></button>
+                    <button onclick="openCredits()"><img src="img/icon/credits.png"></button>
+                </div>
+            </div>
+        </section>
+
+        <section id="album" hidden>
+            <button class="close-btn" onclick="closeSection(this.parentNode)">X</button>
+            <div class="cover">
+                <section id="album-info">
+                    <div>
+                        <span>
+                            <div></div>
+                        </span>
+                    </div>
+                    <h2>~</h2>
+                    <h3></h3>
+                    <p>...</p>
+                </section>
+                <section>
+                    <div id="album-list"></div>
+                </section>
+            </div>
+        </section>
+
+        <section id="credits" hidden>
+            <button class="close-btn" onclick="closeSection(this.parentNode)">X</button>
+            <div>
+                <h1>CRÉDITOS</h1>
+                <h2>Inspirado no jogo Kabuto Park.</h2>
+                <h2>Para o aniversário da Catarina!</h2>
+                <h3>
+                    Feito com ❤ por<br>
+                    Larinie & Yurius
+                </h3>
+            </div>
+        </section>
+        
+        <section id="minigame" hidden>
+            <div id="minigame-bar"><span id="minigame-bar-needle"></span></div>
+            <div id="minigame-bird">
+                <div>
+                    <img id="minigame-bird-image">
+                </div>
+                <label for="minigame-bird-image">-</label>
+            </div>
+            <div>
+                <div id="camerarolls">
+                    <img src="img/icon/cameraroll.png">
+                    <img src="img/icon/cameraroll.png">
+                    <img src="img/icon/cameraroll.png">
+                </div>
+                <button onclick="tryCapture()">TIRAR FOTO!</button>
+            </div>
+        </section>
+        
+        <section id="introduction">
+            <button class="close-btn" onclick="closeSection(this.parentNode)">X</button>
+            <div>
+                <h1>Em um lugar muito distante...</h1>
+                <h2>Uma nova ilha foi descoberta!</h2>
+                <h2>
+                    E rumores dizem que esta ilha é um ponto migratório<br>
+                    de pássaros de todo o mundo!
+                </h2>
+                <h2>
+                    Alguns ousam dizer até que aves extremamente exóticas<br>
+                    e outras que nem voam podem ser encontradas aqui...
+                </h2>
+                <h2>Então... O que estamos esperando? É hora de tirar umas fotos!</h2>
+            </div>
+        </section>
+    </div>
+
+    <script src="birds.js"></script>
+    <script src="script.js" defer></script>
+</body>
+</html>
